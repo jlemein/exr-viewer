@@ -19,6 +19,8 @@ private:
     Ui::MainWindow *ui;
     QMenu *fileMenu;
     QMenu *helpMenu;
+    QImage image;
+//    QLabel *imageLabel;
 
     QAction *saveFileAction;
 //    QAction *loadFileAction;

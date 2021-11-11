@@ -24,8 +24,7 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        ${TS_FILES}
-        test.cpp)
+        ${TS_FILES} exrloader.h exrloader.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(exr-viewer
@@ -54,12 +53,16 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-add_executable(abc test.cpp)
-target_link_libraries(abc PUBLIC fmt::fmt)
+#add_executable(abc test.cpp)
+#target_link_libraries(abc PUBLIC fmt::fmt)
 
 find_package(tinyexr REQUIRED)
 find_package(fmt REQUIRED)
-target_link_libraries(exr-viewer PRIVATE fmt::fmt Qt${QT_VERSION_MAJOR}::Widgets tinyexr::tinyexr )
+target_link_libraries(exr-viewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets tinyexr::tinyexr fmt::fmt)
+
+target_compile_definitions(exr-viewer PUBLIC
+#        -DTINYEXR_USE_ZFP=1
+        )
 
 set_target_properties(exr-viewer PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
