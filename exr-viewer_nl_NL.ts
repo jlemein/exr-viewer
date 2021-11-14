@@ -56,7 +56,7 @@
         <location filename="src/mainwindow.ui" line="125"/>
         <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="145"/>
         <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="145"/>
-        <location filename="src/mainwindow.cpp" line="56"/>
+        <location filename="src/mainwindow.cpp" line="55"/>
         <source>Load Image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -94,7 +94,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/mainwindow.cpp" line="44"/>
+        <location filename="src/mainwindow.cpp" line="43"/>
         <source>Load image</source>
         <translation type="unfinished"></translation>
     </message>

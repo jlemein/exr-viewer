@@ -36,6 +36,5 @@ private:
 private slots:
     void actionOpenLoadImageDialog();
     void actionChangeExposureSlider(int value);
-    void actionExposureSliderReleased();
 };
 #endif // MAINWINDOW_H

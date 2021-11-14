@@ -28,7 +28,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionLoad_Image, SIGNAL(triggered()), this, SLOT(actionOpenLoadImageDialog()));
     connect(ui->exposureSlider, SIGNAL(valueChanged(int)), this, SLOT(actionChangeExposureSlider(int)));
-    connect(ui->exposureSlider, SIGNAL(sliderReleased()), this, SLOT(actionExposureSliderReleased()));
 }
 
 MainWindow::~MainWindow()
@@ -59,11 +58,6 @@ void MainWindow::loadFile(QString fileName) {
 
 void MainWindow::actionChangeExposureSlider(int value) {
     m_exposureControl.setExposure(value*0.01);
-//    syncImage();
-}
-
-void MainWindow::actionExposureSliderReleased() {
-    m_exposureControl.setExposure(m_exposureControl.getExposure(), true);
     syncImage();
 }
 

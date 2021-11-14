@@ -8,7 +8,6 @@
 #include <ImathBox.h>
 #include <ImfMatrixAttribute.h>
 #include <ImfChannelList.h>
-#include <cstdint>
 
 using namespace Imf;
 using namespace Imath;
