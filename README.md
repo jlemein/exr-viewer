@@ -12,7 +12,7 @@ Capabilities that must be supported:
 
 The application is distributed for the following platforms.
 
-* Download the [Ubuntu20](dist/simple-exr-viewer) executable.
+* Download the [Ubuntu20](dist/ubuntu20/simple-exr-viewer) executable.
 * Other platforms need to build from source. More platforms will follow.
 
 # Screenshots
