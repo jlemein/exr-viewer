@@ -13,7 +13,14 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-list(APPEND CMAKE_PREFIX_PATH /home/jeffrey/Qt/6.2.1/gcc_64)
+
+# set the Qt6 path to the location where the library is installed.
+if (NOT DEFINED QT6_SDK_PATH)
+    message(FATAL_ERROR "Please specify a prefix path for QT6_SDK_PATH. Example:
+            -DQT6_SDK_PATH="/home/jeffrey/Qt/6.2.1/gcc_64"")
+endif()
+
+list(APPEND CMAKE_PREFIX_PATH ${QT6_SDK_PATH})
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
