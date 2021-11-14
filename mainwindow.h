@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <exposurecontrol.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,19 +21,21 @@ private:
     QMenu *fileMenu;
     QMenu *helpMenu;
     QImage image;
-//    QLabel *imageLabel;
+
+    ExposureControl m_exposureControl;
 
     QAction *saveFileAction;
-//    QAction *loadFileAction;
     QAction *aboutAction;
     QAction *actionLoad_Image;
 
-//    void createActions();
-//    void createMenus();
+    QString openFileDialog();
+    void loadFile(QString fileName);
+
+    void syncImage();
 
 private slots:
-    void loadFile();
-//    void saveFile();
-//    void about();
+    void actionOpenLoadImageDialog();
+    void actionChangeExposureSlider(int value);
+    void actionExposureSliderReleased();
 };
 #endif // MAINWINDOW_H

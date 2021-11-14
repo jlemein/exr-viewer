@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 project(exr-viewer VERSION 0.1 LANGUAGES CXX)
 
+execute_process(COMMAND conan install .. -s build_type=${CMAKE_BUILD_TYPE})
 include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -10,7 +11,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 list(APPEND CMAKE_PREFIX_PATH /home/jeffrey/Qt/6.2.1/gcc_64)
 
@@ -24,7 +25,11 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        ${TS_FILES} exrloader.h exrloader.cpp)
+        openexrloader.h openexrloader.cpp
+        openexrloader.h openexrloader.cpp
+        exposurecontrol.h exposurecontrol.cpp
+        ${TS_FILES}
+        )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(exr-viewer
@@ -53,12 +58,9 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-#add_executable(abc test.cpp)
-#target_link_libraries(abc PUBLIC fmt::fmt)
-
-find_package(tinyexr REQUIRED)
 find_package(fmt REQUIRED)
-target_link_libraries(exr-viewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets tinyexr::tinyexr fmt::fmt)
+find_package(openexr REQUIRED)
+target_link_libraries(exr-viewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets openexr::openexr fmt::fmt)
 
 target_compile_definitions(exr-viewer PUBLIC
 #        -DTINYEXR_USE_ZFP=1
@@ -70,7 +72,13 @@ set_target_properties(exr-viewer PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
 )
 
-
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(exr-viewer)
 endif()
+
+add_executable(exrinfo exrinfo.cpp openexrloader.h openexrloader.cpp)
+target_link_libraries(exrinfo PRIVATE openexr::openexr)
+
+install(TARGETS exr-viewer
+        RUNTIME DESTINATION bin
+        LIBRARY DESTINATION lib)

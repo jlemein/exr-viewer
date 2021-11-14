@@ -8,7 +8,18 @@ Capabilities that must be supported:
 * Converting EXR to LDR
 * Saving EXR pictures to RGB or PNG.
 
-![](demo.png)
+## Installation
+
+The application is distributed for the following platforms.
+
+* Download the [Ubuntu20](dist/simple-exr-viewer) executable.
+* Other platforms need to build from source. More platforms will follow.
+
+# Screenshots
+
+![Low exposure](dist/screenshot1.png)
+![High exposure](dist/screenshot2.png)
+
 
 ## Build
 
@@ -33,5 +44,5 @@ make -j4
 
 The following dependencies have been used.
 * Qt 6.2.1
-* tinyExr 1.0.0
+* OpenExr 2.5.7
 * fmt 8.0.1

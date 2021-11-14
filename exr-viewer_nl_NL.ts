@@ -5,72 +5,96 @@
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="14"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="117"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="144"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="144"/>
         <source>Simple EXR Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="27"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="125"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="152"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="152"/>
         <source>No image to show</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="39"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="126"/>
+        <location filename="mainwindow.ui" line="48"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="153"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="153"/>
         <source>Exposure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="65"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="127"/>
-        <source>File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="74"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="128"/>
-        <source>Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="84"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="118"/>
-        <location filename="mainwindow.cpp" line="35"/>
-        <source>Load Image</source>
+        <location filename="mainwindow.ui" line="61"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="154"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="154"/>
+        <source>-5.0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="87"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="120"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="155"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="155"/>
+        <source>+5.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="106"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="156"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="156"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="115"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="157"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="157"/>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="125"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="145"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="145"/>
+        <location filename="mainwindow.cpp" line="56"/>
+        <source>Load Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="128"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="147"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="147"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="92"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="122"/>
+        <location filename="mainwindow.ui" line="133"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="149"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="149"/>
         <source>Save Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="97"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="123"/>
+        <location filename="mainwindow.ui" line="138"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="150"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="150"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="102"/>
-        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="124"/>
+        <location filename="mainwindow.ui" line="143"/>
+        <location filename="cmake-build-debug/exr-viewer_autogen/include/ui_mainwindow.h" line="151"/>
+        <location filename="cmake-build-release/exr-viewer_autogen/include/ui_mainwindow.h" line="151"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="19"/>
+        <location filename="mainwindow.cpp" line="21"/>
         <source>Loads a new image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="30"/>
+        <location filename="mainwindow.cpp" line="44"/>
         <source>Load image</source>
         <translation type="unfinished"></translation>
     </message>
