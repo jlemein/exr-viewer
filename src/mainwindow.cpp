@@ -3,7 +3,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QImageReader>
-#include <openexrloader.h>
+#include <src/openexrloader.h>
 #include <iostream>
 
 #include <ImfArray.h>

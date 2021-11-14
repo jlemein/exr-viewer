@@ -1,7 +1,7 @@
 //
 // Created by jeffrey on 14-11-21.
 //
-#include <exposurecontrol.h>
+#include <src/exposurecontrol.h>
 #include <iostream>
 #include <algorithm>
 #include <cmath>

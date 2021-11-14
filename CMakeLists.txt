@@ -21,13 +21,13 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
 set(TS_FILES exr-viewer_nl_NL.ts)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        openexrloader.h openexrloader.cpp
-        openexrloader.h openexrloader.cpp
-        exposurecontrol.h exposurecontrol.cpp
+        src/main.cpp
+        src/mainwindow.cpp
+        src/mainwindow.h
+        src/mainwindow.ui
+        src/openexrloader.h src/openexrloader.cpp
+        src/openexrloader.h src/openexrloader.cpp
+        src/exposurecontrol.h src/exposurecontrol.cpp
         ${TS_FILES}
         )
 
@@ -76,7 +76,7 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(exr-viewer)
 endif()
 
-add_executable(exrinfo exrinfo.cpp openexrloader.h openexrloader.cpp)
+add_executable(exrinfo exrinfo.cpp src/openexrloader.h src/openexrloader.cpp)
 target_link_libraries(exrinfo PRIVATE openexr::openexr)
 
 install(TARGETS exr-viewer

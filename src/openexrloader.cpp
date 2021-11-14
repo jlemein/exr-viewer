@@ -2,7 +2,7 @@
 // Created by jeffrey on 13-11-21.
 //
 
-#include <openexrloader.h>
+#include <src/openexrloader.h>
 #include <ImfRgbaFile.h>
 #include <ImfArray.h>
 #include <ImathBox.h>

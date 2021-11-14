@@ -1,13 +1,15 @@
 //
 // Created by jeffrey on 13-11-21.
 //
-#include <openexrloader.h>
+#include <src/openexrloader.h>
 #include <iostream>
 #include <filesystem>
 
 #include <ImfRgba.h>
 #include <ImfArray.h>
 using namespace std;
+
+// Just a dummy app to explore OpenExr API.
 
 int main(int argc, char** argv) {
     if (argc < 2) {
