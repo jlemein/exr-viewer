@@ -29,7 +29,8 @@ high dynamic range.
 High dynamic range is about representing pixels with values corresponding to the received energy. In essence, it is about how
 bright or dark a pixel can get. In low dynamic range image formats, such as PNG and JPEG, the color white is white.
 The sun, a light bulb and a reflection of a white milk package may all be white, or `#FFFFFF` in hexadecimal notation.
-Clearly we know the sun is way more intense, but when represented in a picture, the pixel value will likely be similar.
+Clearly we know the sun is way more intense, but when represented in a picture, the pixel value will likely be the same. This is
+very unrealistic.
 
 High dynamic range images store their pixel values in floating point format. They consume more bits per color channel and
 are therefore able to represent a larger range of values per pixel. A float is 32 bits and has way more granularity to
@@ -39,10 +40,12 @@ floating point data type. EXR image formats are usually represented as 16 bits p
 Floating point pixel values are usually stored with a value between 0.0 and 1.0. Storing the values between 0 and 1 is convenient.
 It is easy to convert to LDR by multiplying with 255, but this defeats the purpose of HDR.
 HDR are by definition scene referred, meaning that the pixel values correspond to the measured amount of energy as observed
-by the camera sensor. HDR images need to be tone mapped for display purposes. Tone mapping is done using two concepts:
+by the camera sensor. HDR images need to be tone mapped for display purposes.
+
+Tone mapping is done using two concepts:
 * **Exposure**: the exposure controls the multiplication factor of the pixel values. If exposure is increased the pixel values become 
 brighter. This reveals the darker parts of the HDR image, if converted to LDR and clamping to the range [0,1].
-* **Gamma**: the sensitivity of the camera does not correspond to how a picture is optimally displayed on a monitor. Each monitor
+* **Gamma correction**: the sensitivity of the camera does not correspond to how a picture is optimally displayed on a monitor. Each monitor
 is different and displays color in a different way. Gamma correction adjusts the raw energy in the HDR image and converts the pixel 
 values to make them appropriate for display purposes. 
 
