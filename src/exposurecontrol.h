@@ -16,15 +16,15 @@
  */
 class ExposureControl {
 private:
-  /// Original source image. This is the backed read-only image.
+  int m_width{0};  /// Width of both the original as well as the active image.
+  int m_height{0}; /// Height of hoth the original as well as the active image.
+  double m_exposure{0.0}; /// Current exposure.
+
+  /// Original source HDR image. This is the read-only image.
   std::unique_ptr<Imf::Array2D<Imf::Rgba>> m_originalImage{nullptr};
 
   /// Image under active manipulation.
   std::unique_ptr<float[]> m_activeImage{nullptr};
-
-  int m_width{0};  /// Width of both the original as well as the active image.
-  int m_height{0}; /// Height of hoth the original as well as the active image.
-  double m_exposure{0.0}; /// Current exposure.
 
 public:
   ExposureControl() = default;
