@@ -17,7 +17,7 @@ The application is distributed for the following platforms.
 
 # Screenshots
 
-Increasing the exposure slider scales up the pixel values. The bright parts get clamped to the max value, and the darker
+Increasing the exposure slider scales up the pixel values. The bright parts get clamped to the maximum value, and the darker
 parts of the image become visible.
 ![Low exposure](dist/screenshot1.png)
 
